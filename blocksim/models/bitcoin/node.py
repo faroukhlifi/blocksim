@@ -169,7 +169,7 @@ class BTCNode(Node):
                         f'{self.address} at {time(self.env)}: Transaction {tx.hash[:8]} was already sent to {node_address}')
                 else:
                     self._mark_transaction(tx.hash, node_address)
-                    transactions_hashes.append(tx.hash)
+                    #transactions_hashes.append(tx.hash)
         # Only send if it has transactions hashes
         if transactions_hashes:
             print(
