@@ -36,5 +36,7 @@ Running Bitcoin and Ethereum simulations allowed us to change conditions and ans
 ## Full paper
 
 You can find the full paper here: https://www.carlosfaria.com/papers/blocksim-blockchain-simulator.pdf
+## Our Edits
 
-Aditionaly, the presentation for the 2019 IEEE International Conference on Blockchain can be found here: https://www.carlosfaria.com/talks/blocksim-ieee-blockchain-2019.pdf
+We edited the input distributions in the config input files as well as added variables to track the number of added children, to compute the total Orphanage rate.
+The most important sections of the code can be found on network.py (time interval between blocks simulation) and Chain.py where the consensus algorithm of appending blocks is simulated.
