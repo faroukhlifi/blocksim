@@ -23,7 +23,7 @@
       "parameters": "(0.12449512563, 0.229892564, 0.0022425785)"
     },
     "time_between_blocks_seconds": {
-      "name": "norm",
+      "name": "expon",
       "parameters": "(0,15.79712454)"
     }
   }
