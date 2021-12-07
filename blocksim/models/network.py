@@ -12,6 +12,7 @@ class Network:
         self._nodes = {}
         self._list_nodes = []
         self._list_probabilities = []
+        self._nb_blocks = 0
 
     def get_node(self, address):
         return self._nodes.get(address)
@@ -49,6 +50,9 @@ class Network:
                 self.env.delays['time_between_blocks_seconds'])[0], 2)
             yield self.env.timeout(time_between_blocks)
             """
+            This part simulate Orphaned rates endogeneously and has been commented accordingly
+            """
+            """
             orphan_blocks_probability = self.env.config[self.blockchain]['orphan_blocks_probability']
             simulate_orphan_blocks = scipy.random.choice(
                 [True, False], 1, p=[orphan_blocks_probability, 1-orphan_blocks_probability])[0]
@@ -66,6 +70,7 @@ class Network:
         print(
             f'Network at {time(self.env)}: Node {node.address} selected to broadcast his candidate block')
         # Give orders to the selected node to broadcast his candidate block
+        self._nb_blocks +=1
         node.build_new_block()
 
 
