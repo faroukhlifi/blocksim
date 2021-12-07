@@ -39,4 +39,5 @@ You can find the full paper here: https://www.carlosfaria.com/papers/blocksim-bl
 ## Our Edits
 
 We edited the input distributions in the config input files as well as added variables to track the number of added children, to compute the total Orphanage rate.
-The most important sections of the code can be found on network.py (time interval between blocks simulation) and Chain.py where the consensus algorithm of appending blocks is simulated.
+The most important sections of the code can be found on network.py (time interval between blocks simulation) and Chain.py where the consensus algorithm of appending blocks is simulated. 
+  Also a bug has been found in the propagation of Bitcoin transaction that didn't halt the code through BFS; that was fixed.
